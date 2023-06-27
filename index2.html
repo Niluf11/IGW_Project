@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv=""X-UA-Compatible" content=" IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>Shop Registration Form | Noor</title>
+</head>
+<body>
+    <div class="Container">
+        <form action="http://localhost:8081/shop/add" method="post">
+            <h2>Store Owner's Registration</h2>
+            <div class="content">
+                <div class="input-box">
+                    <label for="name">Full Name</label>
+                    <input type="text" placeholder="Enter full name" name="ownerName" required>
+                </div>
+                <div class="input-box">
+                    <label for="Shop or Store name">Shop or Store name</label>
+                    <input type="text" placeholder="Enter Shop or Store name" name="shopName" required>
+                </div>
+                <div class="input-box">
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="Enter your valid email id" name="email" required>
+                </div>
+                <div class="input-box">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" placeholder="Enter phone number" name="phone" required>
+                </div>
+                <div class="input-box">
+                    <label for="password">Latitude</label>
+                    <input type="number" placeholder="Enter Latitude" name="lat" required>
+                </div>
+                <div class="input-box">
+                    <label for="confirm-password">Longitude</label>
+                    <input type="number" placeholder="Enter Longitude" name="lng" required>
+                </div>
+                <span class="gender-title">Gender</span>
+                <div class="gender-category">
+                    <input type="radio" name="gender" id="male">
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="female">
+                    <label for="female">Female</label>
+                    <input type="radio" name="gender" id="other">
+                    <label for="other">Other</label>
+                </div>
+            </div>
+            <div class="alert">
+                <p>By clicking on Register, you agree to our <a href="#">Terms,</a> <a href="#">Privacy Policy</a>  and <a href="#">Cookies Policy.</a> You may receive SMS notifications from us and can opt out at any time.</p>
+            </div>
+            <div class="button-container">
+                <button>Register</button>
+            </div>
+        </form>
+    </div>
+</body>

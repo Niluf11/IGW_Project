@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>Shop Registration Form | Noor</title>
+    <style>
+        .input-container {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="Container">
+        <form action="" method="post">
+            <h2>Store Owner's Registration</h2>
+            <div class="content">
+                <div class="input-box">
+                    <label for="name">Shop or Store Name</label>
+                    <input type="text" placeholder="Enter Shop or Store Name" name="name" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="name">Shop Location</label>
+                    <input type="text" placeholder="Latitude and Longitude" name="name" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="name">Product 1</label>
+                    <input type="text" placeholder="Enter Product name" name="name" required>
+                    <input type="text" placeholder="Enter Product Price" name="name" required>
+                </div>
+
+                <div id="product-container"></div>
+
+                <div class="button-container">
+                    <button type="button" onclick="addProductField()">Add Product</button>
+                </div>
+            </div>
+            <div class="alert">
+                <p>By clicking on Update, you agree to our <a href="#">Terms,</a> <a href="#">Privacy Policy</a>  and <a href="#">Cookies Policy.</a> You may receive SMS notifications from us and can opt out at any time.</p>
+            </div>
+            <div class="button-container">
+                <button type="submit">Update</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        let productCount = 1;
+
+        function addProductField() {
+            productCount++;
+
+            const container = document.getElementById("product-container");
+
+            const inputContainer = document.createElement("div");
+            inputContainer.className = "input-box";
+
+            const nameLabel = document.createElement("label");
+            nameLabel.textContent = `Product ${productCount}`;
+            
+
+            const nameInput = document.createElement("input");
+            nameInput.type = "text";
+            nameInput.placeholder = "Enter Product name";
+            nameInput.name = `product${productCount}`;
+            nameInput.required = true;
+
+            const priceInput = document.createElement("input");
+            priceInput.type = "text";
+            priceInput.placeholder = "Enter Product Price";
+            priceInput.name = `price${productCount}`;
+            priceInput.required = true;
+
+            inputContainer.appendChild(nameLabel);
+            inputContainer.appendChild(nameInput);
+            inputContainer.appendChild(priceInput);
+
+            container.appendChild(inputContainer);
+        }
+    </script>
+</body>
+</html>
+
